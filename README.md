@@ -50,4 +50,17 @@ FROM
 ORDER BY
  `baseline_roi` DESC;
 ```
+---
+* **The Critical Finding: Uncovered a massive structural pattern in traditional media economics where the Horror genre completely dominates macro-level profitability metrics. Low-budget productions ($1M USD) such as The Devil Inside and Unfriended generate astronomical ROI ratios (100.8 and 63.1 respectively), proving why baseline programming operations rely heavily on these content profiles before factoring in viewer retention variables.
+---
+## 📉 Scenario 2: Audience Retention Decay Tracking (Ascending Retention Optimization)
+* **Objective:** Isolate titles experiencing severe viewership drops immediately following premiere weeks. By evaluating the percentage of active viewer tracking records retained between initial launch frames and subsequent baseline check-ins, this phase separates superficial trending status from true engagement depth.
 
+* **The SQL Logic: (Staged for Phase 2 Deployment)**
+```sql
+```
+---
+## 🚨 Scenario 3: High-Cost Renewal Risk Isolation (Descending Cost-Per-Viewer Modeling)
+* **Objective:** Rearrange financial catalog constraints to isolate heavy special-effects and star-studded ensembles demanding massive operational budgets. This script surfaces high-risk financial bottlenecks where content sustainability thresholds collapse due to low audience retention.
+
+The SQL Logic: (Staged for Phase 3 Deployment)
