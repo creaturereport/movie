@@ -63,4 +63,7 @@ ORDER BY
 ## 🚨 Scenario 3: High-Cost Renewal Risk Isolation (Descending Cost-Per-Viewer Modeling)
 * **Objective:** Rearrange financial catalog constraints to isolate heavy special-effects and star-studded ensembles demanding massive operational budgets. This script surfaces high-risk financial bottlenecks where content sustainability thresholds collapse due to low audience retention.
 
-The SQL Logic: (Staged for Phase 3 Deployment)
+* **The SQL Logic: (Staged for Phase 3 Deployment)**
+```sql
+```
+---
