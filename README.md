@@ -14,3 +14,20 @@ Looking closely at the top 11 rows, the baseline query just exposed a massive st
 + The Micro-Budget Phenomenon: Look at The Devil Inside and Unfriended. With tiny $1M budgets (Budget_usd), their box office returns yielded astronomical ROI ratios (100.8 and 63.1).
 
 + Genre Dominance: Notice how Horror completely dominates the top rankings. From an operational standpoint, this proves why studio executives rely heavily on low-risk, high-return genre formulas for baseline platform profitability.
+sql
+```
+SELECT
+`Movie Title`,
+`Genre_1`,
+`Budget_usd`,
+`Box Office Revenue_usd`,
+-- Calculate raw baseline profit margins
+(`Box Office Revenue_usd` - `Budget_usd`) AS `baseline_profit`,
+-- Calculate percentage ROI to establish a performance benchmark
+ROUND((`Box Office Revenue_usd` - `Budget_usd`) / `Budget_usd`, 2) AS `baseline_roi`
+FROM
+ `healthy-bonsai-231119.Movie_Data.Movie_Data_Scenario_1`
+ORDER BY
+ `baseline_roi` DESC;
+```
+**Question: The foundation to layer on the real-world streaming twist: What happens to these highly profitable titles when audience retention decay hits?
