@@ -52,6 +52,14 @@ ORDER BY
 ```
 ---
 * **The Critical Finding: Uncovered a massive structural pattern in traditional media economics where the Horror genre completely dominates macro-level profitability metrics. Low-budget productions ($1M USD) such as The Devil Inside and Unfriended generate astronomical ROI ratios (100.8 and 63.1 respectively), proving why baseline programming operations rely heavily on these content profiles before factoring in viewer retention variables.
+
+### 🛠️ Source-System Ingestion & Data Quality Log
+
+During the initial table migration from the Google Sheets sandbox environment into the Google BigQuery production dataset, the data engineering pipeline encountered structural schema anomalies. The following proactive interventions were executed to preserve data sovereignty and relational tracking:
+
+* **Source Character Transformation & Tokenization:** The source schema utilized non-standard operational string characters, specifically parentheses within header identifiers (e.g., `Genre (1)`). Native SQL database engines frequently interpret these as system command parameters, leading to execution failures. This was resolved at the source layer by migrating variables into standardized `snake_case` formats (`genre_1`, `genre_2`), eliminating downstream syntax friction.
+* **Schema Validation & Relational Alignment:** Automated database ingestion parameters can misinterpret column parameters based on sparse row distributions, causing localized data-gaps or object mismatch errors. A comprehensive field audit was conducted to guarantee that all automated data definitions strictly mirrored the physical table schemas.
+* **Ingestion Integrity Verification:** Utilizing BigQuery's `Auto-detect` parameter requires manual post-ingestion validation. The complete catalog dataset was audited via structural explorations to ensure 100% record mapping accuracy. A data density audit successfully confirmed that missing values within secondary classifications (`genre_2`) cleanly represented true system nulls inherent to the source data, rather than dropped packets during the ingestion cycle.
 ---
 ## 📉 Scenario 2: Audience Retention Decay Tracking (Ascending Retention Optimization)
 * **Objective:** Isolate titles experiencing severe viewership drops immediately following premiere weeks. By evaluating the percentage of active viewer tracking records retained between initial launch frames and subsequent baseline check-ins, this phase separates superficial trending status from true engagement depth.
