@@ -1,23 +1,41 @@
-# movie 
+# Streaming Platform Content Performance & Audience Retention Analytics
 
-**I ran into a need to do some data cleaning to transpose the data from Google Sheets > Google BigQuery that I thought were important to document (from a learners standpoint).Here are troublehooting notes taken to troubleshoot :
+**Data Analyst:** Symone Thompson  
+**Client/Sponsor:** Global Streaming Entertainment Operations & Programming Logistics  
 
-+ Source Data Sovereignty: Resolving complex characters like () with standard snake_case _ at the source spreadsheet saves hours of syntax debugging later.
+---
 
-+ Exact Relational Mapping: Ensuring naming conventions match your physical schemas exactly eliminates false errors like that location glitch.
+## 🎯 Purpose
+The purpose of this project is to address high-stakes production budget allocation and content viability challenges across a global streaming platform catalog. While superficial tracking models rely entirely on short-term trending metrics (such as a title briefly peaking on a Top 10 chart), true platform stability requires a deep evaluation of initial marketplace returns weighed against multi-week audience engagement decay. By evaluating raw production investments and historical catalog trends, this project isolates the explicit content profiles, genre bottlenecks, and high-cost retention thresholds that trigger abrupt, real-world content cancellations.
 
-+ Schema Ingestion Awareness: Trusting Auto detect but actively auditing the result keeps your data clean.
+---
 
+## 🚫 Out of Scope (Project Exclusions)
+* **Real-Time Ad-Revenue Monetization:** Live streaming API data capture and individual subscriber ad-impression micro-transactions are entirely outside the scope of this analytics sprint.
+* **Social Media Sentiment Extraction:** External platform scraping (e.g., parsing unstructured user text data or review threads from Reddit or X) is excluded from this structured relational data model.
+* **Live User Demographics Mapping:** Tracking real-time subscriber account profiles or geolocation streaming metrics is not included in this catalog evaluation.
+
+---
+
+## 📦 Deliverables
+* **SQL Optimization Engine Scripts:** Clean, production-ready, and well-commented `.sql` files executing baseline ROI calculations, multi-week retention coefficients, and high-risk budget risk modeling using Google BigQuery standard SQL syntax.
+* **Cleaned Operational Datasets:** A curated data inventory containing baseline catalog configurations, processed retention coefficients, and high-budget risk assessments stored within the `Data_Cleaned/` directory.
+* **Executive Summary SOW Documentation:** Formally structured Scope of Work documents mapping out project boundaries, schemas, milestones, and data validation logs for strategic platform programming leadership.
 > 📊 **Analytical Scale Note:** All financial investment metrics (`Budget_usd`, `Box_Office_Revenue_usd`, and `baseline_profit`) are recorded in **USD ($)**. For high-level executive reporting, these baseline figures scale into the **millions of dollars** (e.g., a record displaying `101800000` represents **$101.8M USD**). The `baseline_roi` column represents a pure percentage ratio format.
+---
 
-🔍 Analyzing the Baseline Reality - Phase 1
-Looking closely at the top 11 rows, the baseline query just exposed a massive strategic pattern in traditional media economics:
+## 🗓️ Schedule Overview & Project Milestones
+Project execution is structured across highly focused technical milestones:
+* **Phase 1: Ingestion & Baseline Auditing |** Access the Google BigQuery console sandbox environment, connect to the catalog table schemas, and isolate initial variables to validate core ROI investment benchmarks.
+* **Phase 2: Retention Coefficient Analytics |** Draft, test, and execute advanced multi-week viewership decay query logic utilizing `ORDER BY ASC` sorting rules to identify hidden platform drops.
+* **Phase 3: High-Budget Risk Modeling & Closure |** Synthesize financial investment weights against active retention floors to isolate top-tier cost bottlenecks and deploy finalized portfolio code assets directly to GitHub.
 
-+ The Micro-Budget Phenomenon: Look at The Devil Inside and Unfriended. With tiny $1M budgets (Budget_usd), their box office returns yielded astronomical ROI ratios (100.8 and 63.1).
+---
 
-+ Genre Dominance: Notice how Horror completely dominates the top rankings. From an operational standpoint, this proves why studio executives rely heavily on low-risk, high-return genre formulas for baseline platform profitability.
-sql
-```
+## 📊 Scenario 1: Baseline Structural Audit (Unsorted Exploration)
+* **Objective:** Ingest the raw entertainment catalog data within the GCP sandbox to map out the distribution of production costs relative to genre categories, verifying baseline schema structures without sorting overrides or secondary active filters.
+* **The SQL Logic:**
+```sql
 SELECT
 `Movie Title`,
 `Genre_1`,
@@ -32,4 +50,4 @@ FROM
 ORDER BY
  `baseline_roi` DESC;
 ```
-**Question: The foundation to layer on the real-world streaming twist: What happens to these highly profitable titles when audience retention decay hits?
+
