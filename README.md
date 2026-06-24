@@ -91,14 +91,14 @@ ORDER BY
 * **The SQL Logic:**
 ```sql
 SELECT
-  `Movie_Title`,
+  `Movie Title`,
   `Genre_1`,
   `Budget_usd`,
-  `Box_Office_Rev`,
+  `Box Office Revenue_usd`,
   -- Isolate the core profit metric
-  (`Box_Office_Rev` - `Budget_usd`) AS `baseline_profit`,
+  (`Box Office Revenue_usd` - `Budget_usd`) AS `baseline_profit`,
   -- Calculate the retention coefficient to look for financial exposure
-  ROUND((`Box_Office_Rev` / `Budget_usd`) * 0.75, 2) AS `retention_coefficient`
+  ROUND((`Box Office Revenue_usd` / `Budget_usd`) * 0.75, 2) AS `retention_coefficient`
 FROM
   `healthy-bonsai-231119.Movie_Data.Movie_Data_Scenario_1`
 ORDER BY
