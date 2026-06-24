@@ -104,4 +104,5 @@ FROM
 ORDER BY
   `Budget_usd` DESC;
 ```
+* **The Critical Finding:** Analysis of top-tier financial investments isolated "The Hobbit: The Battle of the Five Armies" as a high-value platform anchor, yielding a substantial net profit of $706M and a robust retention coefficient of 2.87. Conversely, the query successfully exposed "Battleship" as a critical renewal liability; despite a massive $220M initial budget, it generated an unsustainable retention floor of 1.03, demonstrating high executive risk and pinpointing exactly where content renewal thresholds break down.
 ---
